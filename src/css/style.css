@@ -104,8 +104,8 @@ footer {
 }
 
 .dark-theme {
-  background-color: #222; /* fondo oscuro */
-  color: #fff; /* texto claro */
+  background-color: #fff; /* fondo oscuro */
+  color: #222; /* texto claro */
 }
 
 .dark-theme .theme-toggle-button {
