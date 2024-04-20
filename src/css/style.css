@@ -1,4 +1,192 @@
-h1{
-    text-align: center;
-    
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* fondo oscuro */
+  color: #fff; /* texto claro */
+}
+
+header {
+  background-color: #2ecc71; /* verde neon */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  display: inline-block; /* Para permitir que el enlace se alinee a su lado */
+}
+
+#profile-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img#profile-pic {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+section#about-me {
+  flex: 1;
+}
+
+section {
+  padding: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-buttons a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+/* Cambiar colores de los botones */
+.button1 {
+  background-color: #00acee ; /* twitter */
+}
+
+.button2 {
+  background-color: #0088cc; /* telegram */
+}
+
+.button3 {
+  background-color: #c7d5e0; /* steam  */
+}
+
+.button4 {
+  background-color: #5865f2; /* discord */
+}
+
+.button5 {
+  background-color: #e67e22; /* naranja neon */
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #2ecc71; /* verde neon */
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* Estilos para el botón de cambio de tema */
+.theme-toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #2ecc71; /* verde neon */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dark-theme {
+  background-color: #222; /* fondo oscuro */
+  color: #fff; /* texto claro */
+}
+
+.dark-theme .theme-toggle-button {
+  background-color: #2c3e50; /* azul oscuro */
+}
+
+
+/* Estilos para la galería de fotos */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery-image {
+  width: calc(33.33% - 10px); /* 33.33% para tres imágenes por fila y restamos el espacio de separación */
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+  position: relative; /* Establecer la posición relativa para el contenedor */
+}
+
+.gallery-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajustar la imagen para cubrir el contenedor manteniendo su proporción */
+  object-position: center; /* Centrar la imagen dentro del contenedor */
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para los enlaces de los artistas */
+.gallery-image a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #2ecc71; /* verde neon */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.gallery-image a:hover {
+  color: #27ae60; /* verde más oscuro */
+}
+
+
+/* Estilos para el enlace de la galería */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #2ecc71; /* verde neon */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #27ae60; /* verde más oscuro */
+}
+nav {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
