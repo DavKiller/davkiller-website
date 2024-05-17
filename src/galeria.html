@@ -1,10 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="
+UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería de Fotos</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/
+galeria.css"> <!-- Link to the separate CSS file for galeria.html -->
 </head>
 <body>
   <header>
@@ -19,23 +23,51 @@
   <section id="photo-gallery">
     <h2>Dibujos</h2>
     <div class="gallery">
-      <div class="gallery-image">
-        <img src="./images/image1.png" alt="Imagen 1">
+      <div class="gallery-image-div">
+        <img src="./images/image1.png"
+ alt="Imagen 1" class="gallery-image">
         <a href="https://www.artista1.com">🖌️Artista 1</a>
       </div>
-      <div class="gallery-image">
-        <img src="./images/image2.png" alt="Imagen 2">
+      <div class="gallery-image-div">
+        <img src="./images/image2.png" alt="Imagen 2" class="gallery-image">
         <a href="https://www.artista2.com">🖌️Artista 2</a>
       </div>
-      <div class="gallery-image">
-        <img src="./images/image3.png" alt="Imagen 3">
+      <div class="gallery-image-div">
+        <img src="./images/image3.png" alt="Imagen 3" class="gallery-image">
         <a href="https://www.artista3.com">🖌️Artista 3</a>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2024 Mi Fursona. Todos los derechos reservados.</p>
-  </footer>
+  <script src="./scripts/main.js"></script>
 </body>
+<script>
+ const galleryImages = document.querySelectorAll('.gallery-image');
+galleryImages.forEach((image) => {
+  image.addEventListener('click', function() {
+    // Hide the previously opened lightbox (if any)
+    const openLightbox = document.querySelector('.lightbox');
+    if (openLightbox) {
+      openLightbox.remove();
+    }
+    // Create a new lightbox for the clicked image
+    const lightbox = document.createElement('div');
+    lightbox.classList.add('lightbox');
+    const zoomedImage = document.createElement('img');
+    zoomedImage.src = image.src;
+    lightbox.appendChild(zoomedImage);
+    document.body.appendChild(lightbox);
+    // Set the size of the lightbox image to fit the screen
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    zoomedImage.style.maxWidth = `${windowWidth * 0.8}px`;
+    zoomedImage.style.maxHeight = `${windowHeight * 0.8}px`;
+    // Add a click event listener to the lightbox to close it
+    lightbox.addEventListener('click', function() {
+      lightbox.remove();
+    });
+  });
+});
+</script>
+
 </html>
